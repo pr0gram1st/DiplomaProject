@@ -1,0 +1,27 @@
+<nav>
+    <div class="container nav__container">
+        <a href="{% url 'index' %}"><h4>KOMEK</h4></a>
+        <ul class="nav__menu">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'courses' %}">Courses</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            {% if user.is_authenticated %}
+                <li><a id="toggleButton">{{request.session.person.username}}</a></li>
+                <ul class="normalclass" id="dropdownContent">
+                    {% if user.is_superuser %}
+                        <li><a href="{% url 'adminpage' %}">Admin Page</a></li>  
+                    {% else %}
+                        <li><a href="{% url 'profile' %}">Profile</a></li>  
+                    {% endif %}
+                    <li><a href="{% url 'logout' %}">Logout</a></li>  
+                </ul>   
+            {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+            {% endif %}
+            
+        </ul>
+        <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+        <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+    </div>
+</nav>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komek.kz</title>
+    <!-- ICONSCOUT CDN -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+
+    <!-- GOOGLE FONTS (MONTSERRAT)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+      body { background-image: url("{% static 'images/bg-texture.png' %}") }
+      .courses { margin-top: 1rem  }
+    </style>
+</head>
+<body>
+  {% include 'navbar.html' %}
+    <section class="courses">
+      <div class="container courses__container">
+        {% for i in list %}
+        <article class="course">
+          <div class="course__image">
+            <img src="{{i.photo.url}}" />
+          </div>
+          <div class="course__info">
+            <h4>{{i.name}}</h4>
+            <p>
+              {{i.info}}
+            </p>
+            <a href="course/{{i.id}}" class="btn btn-primary">Learn More</a>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+    <!--================== END OF COURSES ==================-->
+    {% include 'footer.html' %}
+      <script src="{% static 'js/main.js' %}"></script>
+  </body>
+  </html>

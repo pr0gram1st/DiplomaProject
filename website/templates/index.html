@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komek.kz</title>
+    {% load static %}
+    <!-- ICONSCOUT CDN -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+
+    <!-- GOOGLE FONTS (MONTSERRAT) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+    <!-- SWIPER JS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+    <style>
+        body { background-image: url("{% static 'images/bg-texture.png' %}") }
+    </style>
+</head>
+<body>
+  {% include 'navbar.html' %}
+    <header>
+        <div class="container header__container">
+            <div class="header__left">
+                <h1>Find Your Dream Path In IT World With Us</h1>
+                <p>
+                    You Have A Vision. We Have A Team To Get You There
+                </p>
+                <a href="{% url 'quiz' %}" class="btn btn-primary">Get Started</a>
+            </div>
+            
+            <div class="header__right">
+                <div class="header__right-image">
+                    <img src="{% static 'images/header.svg' %}">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--========================== END OF HEADER ============================-->
+
+
+
+
+
+
+
+    <section class="categories">
+        <div class="container categories__container">
+          <div class="categories__left">
+            <h1>If You Are A High School Student</h1>
+            <p>
+                Our Platform Helps Explore Interests And Potential Career Paths Earlier In Academic Journey. This Provide A Head Start In Developing Skills And Experience That Will Be Valuable In The Future.
+            </p>
+            <a href="{% url 'courses' %}" class="btn">Learn More</a>
+          </div>
+  
+          <div class="categories__right">
+            <article class="category">
+              <span class="category__icon">
+                <i class="uil uil-bitcoin-circle"></i>
+              </span>
+              <h5>Blockchain</h5>
+              <p>Lorem ipsum dolor sit amet consectetur, elit temporibus, qui.</p>
+            </article>
+  
+            <article class="category">
+              <span class="category__icon">
+                <i class="uil uil-java-script"></i>
+              </span>
+              <h5>Software Developer/Engineer</h5>
+              <p>Lorem ipsum dolor sit amet consectetur, elit temporibus, qui.</p>
+            </article>
+  
+            <article class="category">
+              <span class="category__icon">
+                <i class="uil uil-cloud-database-tree"></i>
+              </span>
+              <h5>Cloud computing</h5>
+              <p>Lorem ipsum dolor sit amet consectetur, elit temporibus, qui.</p>
+            </article>
+  
+            <article class="category">
+              <span class="category__icon">
+                <i class="uil uil-browser"></i>
+              </span>
+              <h5>Website Developer</h5>
+              <p>Lorem ipsum dolor sit amet consectetur, elit temporibus, qui.</p>
+            </article>
+  
+            <article class="category">
+              <span class="category__icon">
+                <i class="uil uil-server-network-alt"></i>
+              </span>
+              <h5>Networks and systems</h5>
+              <p>Lorem ipsum dolor sit amet consectetur, elit temporibus, qui.</p>
+            </article>
+  
+            <article class="category">
+              <span class="category__icon">
+                <i class="uil uil-database"></i>
+              </span>
+              <h5>Database Administrator</h5>
+              <p>Lorem ipsum dolor sit amet consectetur, elit temporibus, qui.</p>
+            </article>
+          </div>
+        </div>
+        
+      </section>
+
+      <section class="categoriese">
+        <div class="container categories__container">
+          <div class="categories__left">
+            <h1>If You Are A University Student</h1>
+            <p>
+                Our Platform Provide Clear Descriptions Of Different IT Job Roles, Along With Information On Salaries And Other Benefits. This Helps Better Understand What Each Job Entails, And Make Informed Decisions About Which Roles To Pursue.
+
+            </p>
+            <a href="{% url 'courses' %}" class="btn">Learn More</a>
+          </div>
+  
+          <div class="categories__right">
+            <article class="category">
+              <span class="category__icon">
+                <i class="uil uil-shield-plus"></i>
+              </span>
+              <h5>Cybersecurity</h5>
+              <p>Lorem ipsum dolor sit amet consectetur, elit temporibus, qui.</p>
+            </article>
+  
+            <article class="category">
+              <span class="category__icon">
+                <i class="uil uil-comment-question"></i>
+              </span>
+              <h5>IT Support/Helpdesk</h5>
+              <p>Lorem ipsum dolor sit amet consectetur, elit temporibus, qui.</p>
+            </article>
+  
+            <article class="category">
+              <span class="category__icon">
+                <i class="uil uil-github-alt"></i>
+              </span>
+              <h5>IT Project Manager</h5>
+              <p>Lorem ipsum dolor sit amet consectetur, elit temporibus, qui.</p>
+            </article>
+  
+            <article class="category">
+              <span class="category__icon">
+                <i class="uil uil-servers"></i>
+              </span>
+              <h5>Data Scientist</h5>
+              <p>Lorem ipsum dolor sit amet consectetur, elit temporibus, qui.</p>
+            </article>
+  
+            <article class="category">
+              <span class="category__icon">
+                <i class="uil uil-image-lock"></i>
+              </span>
+              <h5>Product Manager</h5>
+              <p>Lorem ipsum dolor sit amet consectetur, elit temporibus, qui.</p>
+            </article>
+  
+            <article class="category">
+              <span class="category__icon">
+                <i class="uil uil-info-circle"></i>
+              </span>
+              <h5>Information Technology Auditor</h5>
+              <p>Lorem ipsum dolor sit amet consectetur, elit temporibus, qui.</p>
+            </article>
+          </div>
+        </div>
+        
+      </section>
+      <!--====================== END OF CATEGORIES =====================-->
+
+
+
+
+
+
+
+
+      <section class="courses">
+          <h2>Our Popular Courses</h2>
+          <div class="container courses__container">
+            <article class="course">
+                <div class="course__image">
+                    <img src="{% static 'images/course1.jpg' %}">
+                </div>
+                <div class="course__info">
+                    <h4>Responsive Social Media Website UI Design</h4>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt aperiam deserunt eaque quos iure ad debitis.
+                    </p>
+                    <a href="{% url 'courses' %}" class="btn btn-primary">Learn More</a>
+                </div>
+            </article>
+
+            <article class="course">
+                <div class="course__image">
+                    <img src="{% static 'images/course2.jpg' %}">
+                </div>
+                <div class="course__info">
+                    <h4>Responsive SmartHome Website Design</h4>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt aperiam deserunt eaque quos iure ad debitis.
+                    </p>
+                    <a href="{% url 'courses' %}" class="btn btn-primary">Learn More</a>
+                </div>
+            </article>
+
+            <article class="course">
+                <div class="course__image">
+                    <img src="{% static 'images/course3.jpg' %}">
+                </div>
+                <div class="course__info">
+                    <h4>Responsive Admin Dashboard UI Design</h4>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt aperiam deserunt eaque quos iure ad debitis.
+                    </p>
+                    <a href="{% url 'courses' %}" class="btn btn-primary">Learn More</a>
+                </div>
+            </article>
+          </div>
+      </section>
+      <!--====================== END OF COURSES =====================-->
+
+
+
+
+
+
+
+
+
+      <section class="faqs">
+          <h2>Frequently Asked Questions</h2>
+          <div class="container faqs__container">
+              <article class="faq">
+                  <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                  <div class="question__answer">
+                      <h4>How do I know the right courses for me?</h4>
+                      <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium quis qui similique quidem at voluptatem ex. Est dolorum minima dolor aut ut, accusantium vitae architecto aliquid nostrum numquam quibusdam.
+                      </p>
+                  </div>
+              </article>
+
+              <article class="faq">
+                  <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                  <div class="question__answer">
+                      <h4>How do I know the right courses for me?</h4>
+                      <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium quis qui similique quidem at voluptatem ex. Est dolorum minima dolor aut ut, accusantium vitae architecto aliquid nostrum numquam quibusdam.
+                      </p>
+                  </div>
+              </article>
+
+              <article class="faq">
+                  <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                  <div class="question__answer">
+                      <h4>How do I know the right courses for me?</h4>
+                      <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium quis qui similique quidem at voluptatem ex. Est dolorum minima dolor aut ut, accusantium vitae architecto aliquid nostrum numquam quibusdam.
+                      </p>
+                  </div>
+              </article>
+
+              <article class="faq">
+                  <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                  <div class="question__answer">
+                      <h4>How do I know the right courses for me?</h4>
+                      <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium quis qui similique quidem at voluptatem ex. Est dolorum minima dolor aut ut, accusantium vitae architecto aliquid nostrum numquam quibusdam.
+                      </p>
+                  </div>
+              </article>
+
+              <article class="faq">
+                  <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                  <div class="question__answer">
+                      <h4>How do I know the right courses for me?</h4>
+                      <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium quis qui similique quidem at voluptatem ex. Est dolorum minima dolor aut ut, accusantium vitae architecto aliquid nostrum numquam quibusdam.
+                      </p>
+                  </div>
+              </article>
+
+              <article class="faq">
+                  <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                  <div class="question__answer">
+                      <h4>How do I know the right courses for me?</h4>
+                      <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium quis qui similique quidem at voluptatem ex. Est dolorum minima dolor aut ut, accusantium vitae architecto aliquid nostrum numquam quibusdam.
+                      </p>
+                  </div>
+              </article>
+
+              <article class="faq">
+                  <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                  <div class="question__answer">
+                      <h4>How do I know the right courses for me?</h4>
+                      <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium quis qui similique quidem at voluptatem ex. Est dolorum minima dolor aut ut, accusantium vitae architecto aliquid nostrum numquam quibusdam.
+                      </p>
+                  </div>
+              </article>
+
+              <article class="faq">
+                  <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                  <div class="question__answer">
+                      <h4>How do I know the right courses for me?</h4>
+                      <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium quis qui similique quidem at voluptatem ex. Est dolorum minima dolor aut ut, accusantium vitae architecto aliquid nostrum numquam quibusdam.
+                      </p>
+                  </div>
+              </article>
+
+              <article class="faq">
+                  <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                  <div class="question__answer">
+                      <h4>How do I know the right courses for me?</h4>
+                      <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium quis qui similique quidem at voluptatem ex. Est dolorum minima dolor aut ut, accusantium vitae architecto aliquid nostrum numquam quibusdam.
+                      </p>
+                  </div>
+              </article>
+
+              <article class="faq">
+                  <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                  <div class="question__answer">
+                      <h4>How do I know the right courses for me?</h4>
+                      <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium quis qui similique quidem at voluptatem ex. Est dolorum minima dolor aut ut, accusantium vitae architecto aliquid nostrum numquam quibusdam.
+                      </p>
+                  </div>
+              </article>
+          </div>
+      </section>
+      <!--====================== END OF FAQs =====================-->
+
+
+
+
+
+
+
+      <section class="container testimonials__container mySwiper">
+          <h2>Students' Testimonials</h2>
+          <div class="swiper-wrapper">
+              <article class="testimonial swiper-slide">
+                  <div class="avatar">
+                      <img src="{% static 'images/avatar1.jpg' %}">
+                  </div>
+                  <div class="testimonial__info">
+                      <h5>Diana</h5>
+                      <small>Student</small>
+                  </div>
+                  <div class="testimonial__body">
+                      <p>
+                        "I was skeptical about taking an online course, but this one was fantastic. The instructor was always available to answer questions and provide feedback, and the course content was incredibly thorough. I would definitely take another class with this instructor."                      </p>
+                  </div>
+              </article>
+
+              <article class="testimonial swiper-slide">
+                  <div class="avatar">
+                      <img src="{% static 'images/avatar2.jpg' %}">
+                  </div>
+                  <div class="testimonial__info">
+                      <h5>Abay</h5>
+                      <small>Web Developer</small>
+                  </div>
+                  <div class="testimonial__body">
+                      <p>
+                        "This course was a true collaboration between myself and my students. I learned just as much from them as they did from me, and their feedback and insights helped me to continuously improve my teaching. It was a wonderful learning experience for all involved."                      </p>
+                  </div>
+              </article>
+
+              <article class="testimonial swiper-slide">
+                  <div class="avatar">
+                      <img src="{% static 'images/avatar3.jpg' %}">
+                  </div>
+                  <div class="testimonial__info">
+                      <h5>Edem</h5>
+                      <small>Student</small>
+                  </div>
+                  <div class="testimonial__body">
+                      <p>
+                        "I loved how interactive this course was. The instructor encouraged discussion and collaboration, which made the material much more engaging. I feel like I not only learned a lot, but I also made some great connections with my classmates."                      </p>
+                  </div>
+              </article>
+
+              <article class="testimonial swiper-slide">
+                  <div class="avatar">
+                      <img src="{% static 'images/avatar4.jpg' %}">
+                  </div>
+                  <div class="testimonial__info">
+                      <h5>Hanna</h5>
+                      <small>Student</small>
+                  </div>
+                  <div class="testimonial__body">
+                      <p>
+                        "This course exceeded my expectations in every way. The instructor was passionate about the subject matter, and their enthusiasm was contagious. I came away from this experience feeling inspired and motivated to continue learning more."                      </p>
+                  </div>
+              </article>
+
+              <article class="testimonial swiper-slide">
+                  <div class="avatar">
+                      <img src="{% static 'images/avatar5.jpg' %}">
+                  </div>
+                  <div class="testimonial__info">
+                      <h5>Janna</h5>
+                      <small>Student</small>
+                  </div>
+                  <div class="testimonial__body">
+                      <p>
+                        "I was skeptical about taking an online course, but this one was fantastic. The instructor was always available to answer questions and provide feedback, and the course content was incredibly thorough. I would definitely take another class with this instructor."                      </p>
+                  </div>
+              </article>
+          </div>
+          <div class="swiper-pagination"></div>
+      </section>
+      <!--====================== END OF TESTIMONIALS =====================-->
+
+
+
+
+
+
+
+
+      {% include 'footer.html' %}
+
+
+      <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

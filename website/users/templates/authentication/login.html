@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+  <style>
+    /* CSS code goes here */
+    :root {
+        --color-primary: #0c5c91;
+        --color-success: #00bf8e;
+        --color-warning: #f7c94b;
+        --color-danger: #f75842;
+        --color-danger-variant: rgba(247, 88, 66, 0.4);
+        --color-white: #fff;
+        --color-light: rgba(255, 255, 255, 0.7);
+        --color-black: #000;
+        --color-bg: #082d46;
+        --color-bg1: #0a5080;
+        --color-bg2: #0d67a3;
+
+        --container-width-lg: 80%;
+        --container-width-md: 90%;
+        --container-width-sm: 94%;
+
+        --transition: all 400ms ease;
+        }
+    body {
+
+      font-family: "Montserrat", sans-serif;
+
+      background: linear-gradient(135deg, #ffffff, #0c5c91);
+    }
+
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-form {
+        background: transparent;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); /* Added shadow */
+      padding: 40px;
+      width: 300px;
+      border-radius: 20px;
+      border-color: var(--color-primary);
+      border-width: 2px;
+    }
+
+    .login-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+      width: 95%;
+      padding: 10px;
+      border: none;
+      background-color: transparent;
+      border-bottom: 2px solid white;
+      margin-bottom: 20px;
+      color: black;
+    }
+    .login-form input[type="text"]:focus,
+    .login-form input[type="password"]:focus, textarea, select{
+      width: 95%;
+      padding: 10px;
+      border: none;
+      background-color: transparent;
+      border-bottom: 2px solid white;
+      margin-bottom: 20px;
+      outline: none;
+    }
+    ::placeholder { 
+  color: black;
+  opacity: 1; 
+}
+    .login-form button {
+      width: 102%;
+      padding: 12px;
+      background-color: var(--color-danger); /* Updated color */
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-form button:hover {
+      background-color: #0c5c91; /* Updated color */
+      border-color: white;
+      border-width: 1px;
+      border-style: solid; 
+    }
+
+    .login-form .message {
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    .login-form .message a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .login-form .message a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .text{
+      color: white;
+      font-size: 20px;
+    }
+
+    .message{
+        color: red;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <form class="login-form" method="POST">
+        {% csrf_token %}
+      <h2 class="text">Login</h2>
+      <div class="message">
+        {% if messages %}
+          {% for message in messages %}
+              {{message}}
+          {% endfor%}
+        {% endif %}
+      </div>
+      <br/>
+      <br/>
+      <input type="text" placeholder="Username" name="username" required>
+      <input type="password" placeholder="Password" name="password" required>
+      <button type="submit">Login</button>
+      <p class="message">Not registered? <a href="{% url 'register' %}">Create an account</a></p>
+    </form>
+  </div>
+</body>
+</html>

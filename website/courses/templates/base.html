@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komek.kz</title>
+    {% load static %}
+    <!-- ICONSCOUT CDN -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+
+    <!-- GOOGLE FONTS (MONTSERRAT) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+    <!-- SWIPER JS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+    <style>
+        body { background-image: url("{% static 'images/bg-texture.png' %}") }
+    </style>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    
+    <div class="courses-main">
+        <div class="courses-title">
+            <h1> {{course_title}}</h1>
+        </div>
+        <div class="courses-video">
+            <iframe width="1000" height="500" src="https://www.youtube.com/embed/HHx3tTQWUx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="courses-description">
+            <p>{{text}}</p>
+        </div>
+        <div class="courses-links">
+            <h2>Useful Links</h2>
+            <br/><br/>
+            <ul>
+            {% for link, name in links.items %}
+                <li><a href="{{link}}">{{name}}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="courses-next">
+            <h3><a href="/exercises/{{ course_id }}/">Go the exercises -></a></h3>
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+      <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
